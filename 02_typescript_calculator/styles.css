@@ -1,0 +1,37 @@
+body {
+  margin: 0;
+  font-family: Cambria, Cochin, Georgia, serif;
+}
+
+.container {
+  max-width: 520px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.row {
+  margin: 0.8rem 0;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.35rem;
+}
+
+input,
+select,
+button {
+  font: inherit;
+  padding: 0.4rem 0.5rem;
+  border: 1px solid #555;
+}
+
+button {
+  background: #efefef;
+  cursor: pointer;
+}
+
+#result {
+  font-weight: 600;
+  min-height: 1.3rem;
+}

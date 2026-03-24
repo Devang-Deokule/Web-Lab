@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="advancedSpaApp">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Experiment 5 - AngularJS Services Events Validation Helpers</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.3/angular.min.js"></script>
+</head>
+<body ng-controller="MainController as vm">
+  <main class="container">
+    <h1>Experiment 5: AngularJS SPA with Services, Events, Validation, Helpers</h1>
+
+    <form name="taskForm" novalidate ng-submit="vm.addTask(taskForm)">
+      <label for="taskInput">Task</label>
+      <input
+        id="taskInput"
+        name="taskInput"
+        type="text"
+        ng-model="vm.newTask"
+        ng-minlength="3"
+        required
+      />
+      <small ng-show="taskForm.taskInput.$touched && taskForm.taskInput.$invalid">
+        Task is required and must be at least 3 characters.
+      </small>
+      <button type="submit">Add Task</button>
+    </form>
+
+    <p><strong>Total Tasks:</strong> {{ vm.taskCount() }}</p>
+
+    <ul>
+      <li ng-repeat="item in vm.tasks track by $index">
+        {{ item.text }}
+        <button type="button" ng-click="vm.removeTask($index)">Remove</button>
+      </li>
+    </ul>
+
+    <p aria-live="polite">{{ vm.message }}</p>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

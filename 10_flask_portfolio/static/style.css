@@ -1,0 +1,28 @@
+body {
+  margin: 0;
+  font-family: "Book Antiqua", "Times New Roman", serif;
+  line-height: 1.55;
+}
+
+.container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+header,
+section {
+  margin-bottom: 1.2rem;
+}
+
+h1,
+h2,
+h3 {
+  margin-bottom: 0.4rem;
+}
+
+article {
+  border-left: 2px solid #ccc;
+  padding-left: 0.7rem;
+  margin: 0.8rem 0;
+}

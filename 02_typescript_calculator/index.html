@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Experiment 2 - TypeScript Calculator</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>Experiment 2: Calculator in TypeScript</h1>
+
+    <div class="row">
+      <label for="num1">First Number</label>
+      <input id="num1" type="number" value="10" />
+    </div>
+
+    <div class="row">
+      <label for="num2">Second Number</label>
+      <input id="num2" type="number" value="5" />
+    </div>
+
+    <div class="row">
+      <label for="operator">Operator</label>
+      <select id="operator">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+      </select>
+    </div>
+
+    <button id="calculateBtn" type="button">Calculate</button>
+    <p id="result"></p>
+  </main>
+
+  <script src="calculator.js"></script>
+</body>
+</html>

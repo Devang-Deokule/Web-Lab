@@ -1,0 +1,32 @@
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  max-width: 640px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+form {
+  display: grid;
+  gap: 0.6rem;
+  max-width: 360px;
+}
+
+input,
+button {
+  padding: 0.45rem;
+  border: 1px solid #555;
+  font: inherit;
+}
+
+small {
+  min-height: 1.2rem;
+}
+
+button {
+  width: fit-content;
+  background: #f1f1f1;
+}

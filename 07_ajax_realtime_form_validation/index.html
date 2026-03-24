@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Experiment 7 - Real Time Form Validation with AJAX</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>Experiment 7: Real Time Form Validation (AJAX)</h1>
+
+    <form id="signupForm" novalidate>
+      <label for="username">Username</label>
+      <input id="username" type="text" autocomplete="off" />
+      <small id="usernameStatus" aria-live="polite"></small>
+
+      <label for="email">Email</label>
+      <input id="email" type="email" />
+      <small id="emailStatus" aria-live="polite"></small>
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <p id="formStatus"></p>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

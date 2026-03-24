@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Experiment 10 - Flask Portfolio</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+<body>
+  <main class="container">
+    <header>
+      <h1>{{ profile.name }}</h1>
+      <p>{{ profile.role }}</p>
+    </header>
+
+    <section>
+      <h2>About</h2>
+      <p>{{ profile.about }}</p>
+    </section>
+
+    <section>
+      <h2>Skills</h2>
+      <ul>
+        {% for skill in profile.skills %}
+          <li>{{ skill }}</li>
+        {% endfor %}
+      </ul>
+    </section>
+
+    <section>
+      <h2>Projects</h2>
+      {% for project in profile.projects %}
+        <article>
+          <h3>{{ project.title }}</h3>
+          <p>{{ project.desc }}</p>
+        </article>
+      {% endfor %}
+    </section>
+  </main>
+</body>
+</html>
