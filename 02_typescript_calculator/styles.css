@@ -1,16 +1,34 @@
 body {
   margin: 0;
   font-family: Cambria, Cochin, Georgia, serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: 1.5rem 1rem;
+  background: #f8f8f8;
 }
 
 .container {
-  max-width: 520px;
-  margin: 2rem auto;
-  padding: 0 1rem;
+  width: min(100%, 520px);
+  padding: 1.5rem;
+  border: 1px solid #d8d8d8;
+  background: #fff;
 }
 
 .row {
-  margin: 0.8rem 0;
+  margin: 0.9rem 0;
+}
+
+h1 {
+  max-width: 26ch;
+  margin: 0 auto 1rem;
+  text-align: center;
+  font-weight: 700;
+  line-height: 1.25;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 label {
@@ -22,8 +40,10 @@ input,
 select,
 button {
   font: inherit;
-  padding: 0.4rem 0.5rem;
+  width: 100%;
+  padding: 0.45rem 0.55rem;
   border: 1px solid #555;
+  box-sizing: border-box;
 }
 
 button {
@@ -32,6 +52,7 @@ button {
 }
 
 #result {
+  margin-top: 0.95rem;
   font-weight: 600;
   min-height: 1.3rem;
 }

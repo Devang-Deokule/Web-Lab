@@ -2,17 +2,39 @@ body {
   margin: 0;
   font-family: "Book Antiqua", "Times New Roman", serif;
   line-height: 1.55;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: 1.5rem 1rem;
+  background: #f8f8f8;
 }
 
 .container {
-  max-width: 800px;
-  margin: 2rem auto;
-  padding: 0 1rem;
+  width: min(100%, 800px);
+  padding: 1.5rem;
+  border: 1px solid #d8d8d8;
+  background: #fff;
 }
 
 header,
 section {
-  margin-bottom: 1.2rem;
+  margin-bottom: 1.15rem;
+}
+
+h1 {
+  max-width: 24ch;
+  margin: 0 auto 0.6rem;
+  text-align: center;
+  font-weight: 700;
+  line-height: 1.25;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+header p {
+  text-align: center;
 }
 
 h1,
