@@ -1,22 +1,13 @@
-var _paq = window._paq = window._paq || [];
+var trackButton = document.getElementById("trackButton");
 
-_paq.push(["trackPageView"]);
-_paq.push(["enableLinkTracking"]);
+if (trackButton) {
+  trackButton.addEventListener("click", function () {
+    var paq = (window._paq = window._paq || []);
+    paq.push(["trackEvent", "Experiment", "ButtonClick", "Sample Event"]);
 
-(function () {
-  var analyticsHost = "https://your-matomo-domain.example/";
-  _paq.push(["setTrackerUrl", analyticsHost + "matomo.php"]);
-  _paq.push(["setSiteId", "1"]);
-
-  var d = document;
-  var g = d.createElement("script");
-  var s = d.getElementsByTagName("script")[0];
-  g.async = true;
-  g.src = analyticsHost + "matomo.js";
-  s.parentNode.insertBefore(g, s);
-})();
-
-document.getElementById("trackButton").addEventListener("click", function () {
-  _paq.push(["trackEvent", "Experiment", "ButtonClick", "Sample Event"]);
-  document.getElementById("status").textContent = "Sample Matomo event queued.";
-});
+    var status = document.getElementById("status");
+    if (status) {
+      status.textContent = "Sample Matomo event queued.";
+    }
+  });
+}

@@ -29,7 +29,7 @@ class GraduateStudent extends Student {
 }
 
 document.getElementById("showBtn")?.addEventListener("click", () => {
-  const graduate = new GraduateStudent("Aarav", 27, "Computer Science");
+  const graduate = new GraduateStudent("Devang Deokule", 58, "Information Technology");
   const output = document.getElementById("output") as HTMLPreElement;
   output.textContent = graduate.describe();
 });

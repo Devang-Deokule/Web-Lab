@@ -6,7 +6,7 @@ app = Flask(__name__)
 @app.route("/")
 def home():
     profile = {
-        "name": "Riya Sharma",
+        "name": "Devang Deokule",
         "role": "Web Developer",
         "about": "Final year student building web applications using HTML, TypeScript, Flask, and MongoDB.",
         "skills": ["HTML", "CSS", "JavaScript", "TypeScript", "Flask", "MongoDB"],

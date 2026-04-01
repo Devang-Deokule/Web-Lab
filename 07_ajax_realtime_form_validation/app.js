@@ -4,7 +4,7 @@ var usernameStatus = document.getElementById("usernameStatus");
 var emailStatus = document.getElementById("emailStatus");
 var formStatus = document.getElementById("formStatus");
 
-var takenUsernames = ["admin", "test", "john", "student1"];
+var takenUsernames = ["admin", "test", "devang", "student1"];
 
 usernameInput.addEventListener("input", function () {
   var value = usernameInput.value.trim();

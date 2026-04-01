@@ -9,7 +9,7 @@ app.config(function ($routeProvider) {
       template: "<h2>About</h2><p>This page demonstrates routing using ngRoute.</p>"
     })
     .when("/contact", {
-      template: "<h2>Contact</h2><p>Email: web-lab@example.com</p>"
+      template: "<h2>Contact</h2><p>Email: deokuledevang@gmail.com</p>"
     })
     .otherwise({
       redirectTo: "/home"

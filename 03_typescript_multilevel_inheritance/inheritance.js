@@ -64,6 +64,6 @@ var GraduateStudent = /** @class */ (function (_super) {
 })(Student);
 
 document.getElementById("showBtn").addEventListener("click", function () {
-  var graduate = new GraduateStudent("Aarav", 27, "Computer Science");
+  var graduate = new GraduateStudent("Devang Deokule", 58, "Information Technology");
   document.getElementById("output").textContent = graduate.describe();
 });
