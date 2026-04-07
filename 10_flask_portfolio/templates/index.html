@@ -1,42 +1,230 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Experiment 10 - Flask Portfolio</title>
-  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Devang Deokule | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <p class="brand">Devang Deokule</p>
+      <nav class="nav-links">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#services">Services</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
   <main class="container">
-    <header>
-      <h1>{{ profile.name }}</h1>
-      <p>{{ profile.role }}</p>
-    </header>
-
-    <section>
-      <h2>About</h2>
-      <p>{{ profile.about }}</p>
-    </section>
-
-    <section>
-      <h2>Skills</h2>
-      <ul>
-        {% for skill in profile.skills %}
-          <li>{{ skill }}</li>
-        {% endfor %}
+    <section class="hero section" id="home">
+      <p class="eyebrow">Hello, I am</p>
+      <h1>Devang Deokule</h1>
+      <p class="headline">Full Stack Developer | IT Engineering Student</p>
+      <p class="hero-summary">
+        Third-year IT engineering student with a diploma in Computer Engineering.
+        I build practical products across web, mobile, and AI/ML domains.
+      </p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="https://devang-deokule.github.io/Portfolio/Devang_Deokule_Resume.pdf" target="_blank" rel="noopener">Download Resume</a>
+        <a class="btn btn-secondary" href="#contact">Let&apos;s Connect</a>
+      </div>
+      <ul class="social-row">
+        <li><a href="https://www.linkedin.com/in/devang-deokule-188584268/" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="https://github.com/Devang-Deokule" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a href="https://x.com/26Devangg" target="_blank" rel="noopener">Twitter</a></li>
+        <li><a href="mailto:deokuledevang@gmail.com">Email</a></li>
       </ul>
     </section>
 
-    <section>
-      <h2>Projects</h2>
-      {% for project in profile.projects %}
-        <article>
-          <h3>{{ project.title }}</h3>
-          <p>{{ project.desc }}</p>
-        </article>
-      {% endfor %}
+    <section class="panel section" id="about">
+      <h2>About Me</h2>
+      <p>
+        I am a third-year IT engineering student with a diploma in Computer Engineering.
+        I have worked on multiple projects and gained hands-on experience in software development,
+        AI/ML, web applications, mobile applications, databases, and software testing.
+      </p>
+      <p>
+        I enjoy exploring new technologies and building solutions for real-world problems.
+        Whether it is coding, designing, or testing, I like being involved in every stage of development.
+        I am always looking for opportunities to learn, collaborate, and grow in tech.
+      </p>
     </section>
-    <p>Devang Deokule - A58</p>
+
+    <section class="panel section" id="skills">
+      <h2>Skills</h2>
+      <ul class="skill-list">
+        <li>Android Development</li>
+        <li>Java</li>
+        <li>Kotlin</li>
+        <li>UI/UX Design</li>
+        <li>Firebase</li>
+        <li>RESTful APIs</li>
+        <li>HTML5 / CSS3</li>
+        <li>JavaScript</li>
+        <li>React</li>
+        <li>C / C++</li>
+        <li>Python</li>
+        <li>SQL</li>
+      </ul>
+    </section>
+
+    <section class="panel section" id="services">
+      <h2>Services</h2>
+      <div class="service-grid">
+        <article class="service-card">
+          <h3>Website Development</h3>
+          <p>Custom website development with clean and efficient code for strong performance across devices.</p>
+          <ul>
+            <li>Responsive design</li>
+            <li>Cross-browser compatibility</li>
+            <li>Performance optimization</li>
+          </ul>
+        </article>
+        <article class="service-card">
+          <h3>Android App Development</h3>
+          <p>Native Android applications focused on usability, speed, and maintainable architecture.</p>
+          <ul>
+            <li>Custom UI/UX</li>
+            <li>API integration</li>
+            <li>Scalable mobile features</li>
+          </ul>
+        </article>
+        <article class="service-card">
+          <h3>Desktop Application Development</h3>
+          <p>Desktop software tailored to business and productivity workflows.</p>
+          <ul>
+            <li>Cross-platform support</li>
+            <li>Database integration</li>
+            <li>Custom business logic</li>
+          </ul>
+        </article>
+        <article class="service-card">
+          <h3>UI/UX Design</h3>
+          <p>User-centered interfaces that are clean, clear, and practical for real users.</p>
+          <ul>
+            <li>Wireframing and prototyping</li>
+            <li>User research</li>
+            <li>Usability-first design</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="panel section" id="projects">
+      <h2>Featured Projects</h2>
+      <div class="project-grid">
+        <article class="project-card">
+          <h3>VESP-App</h3>
+          <p>Android app for college operations with attendance, results, fees, and digital ID using Jetpack Compose and Firebase.</p>
+          <div class="project-links">
+            <a href="https://devang-deokule.github.io/Portfolio/VES%20Polytechnic%20The%20Ultimate%20Academic%20Companion%20Application.pdf" target="_blank" rel="noopener">Case Study</a>
+            <a href="https://github.com/Devang-Deokule/VESP-App.git" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </article>
+        <article class="project-card">
+          <h3>Signify</h3>
+          <p>Real-time sign language detection using MediaPipe, OpenCV, and a custom ML model for text and speech output.</p>
+          <div class="project-links">
+            <a href="https://www.linkedin.com/posts/devang-deokule-188584268_hackathon-codestrom2025-socialimpact-activity-7350186339482439680-5dTd" target="_blank" rel="noopener">Demo</a>
+            <a href="https://github.com/Devang-Deokule/Signify" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </article>
+        <article class="project-card">
+          <h3>Weather Application</h3>
+          <p>Weather app with real-time weather data, forecasts, and location-based updates using public APIs.</p>
+          <div class="project-links">
+            <a href="https://github.com/Devang-Deokule/Weather-Application" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </article>
+        <article class="project-card">
+          <h3>Shree Pest Control Services</h3>
+          <p>Business website project focused on presenting services and improving client discovery online.</p>
+          <div class="project-links">
+            <a href="https://github.com/Devang-Deokule/ShreePestControlServices.git" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </article>
+        <article class="project-card">
+          <h3>NOVA - Personal Voice Assistant</h3>
+          <p>Voice assistant with chat-based interface for app control, messaging, and live updates through APIs.</p>
+          <div class="project-links">
+            <a href="https://github.com/vira250/Full-Voice-Automation" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </article>
+        <article class="project-card">
+          <h3>AI Legal Verifier</h3>
+          <p>AI-based tool to verify legal content against Indian laws using semantic search and embedding workflows.</p>
+          <div class="project-links">
+            <a href="https://www.linkedin.com/posts/devang-deokule-188584268_hackathonfinalist-ieee-legaltech-activity-7345326483814416403-QnuF" target="_blank" rel="noopener">Demo</a>
+            <a href="https://github.com/vira250/AI-Legal-Verifier.git" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="panel section" id="education">
+      <h2>Education</h2>
+      <div class="education-card">
+        <h3>B.E. in Information Technology</h3>
+        <p>Currently in third year, focused on software engineering, web technologies, and AI/ML projects.</p>
+      </div>
+      <div class="education-card">
+        <h3>Diploma in Computer Engineering</h3>
+        <p>Built strong foundations in programming, databases, and application development.</p>
+      </div>
+    </section>
+
+    <section class="panel section" id="contact">
+      <h2>Contact</h2>
+      <p>
+        Feel free to reach out if you are looking for a developer, want to collaborate,
+        or just want to connect.
+      </p>
+      <div class="contact-grid">
+        <p><strong>Email:</strong> <a href="mailto:deokuledevang@gmail.com">deokuledevang@gmail.com</a></p>
+        <p><strong>Phone:</strong> <a href="tel:+917039969768">+91 7039969768</a></p>
+        <p><strong>Location:</strong> Mumbai, India</p>
+      </div>
+      <form class="contact-form" action="{{ url_for('sendemail') }}" method="post">
+        <h3>Send a Message</h3>
+        <div class="form-grid">
+          <label>
+            Your Name
+            <input type="text" name="name" required>
+          </label>
+          <label>
+            Your Email
+            <input type="email" name="_replyto" required>
+          </label>
+        </div>
+        <label>
+          Subject
+          <input type="text" name="Subject" required>
+        </label>
+        <label>
+          Your Message
+          <textarea name="message" rows="5" required></textarea>
+        </label>
+        <button class="btn btn-primary" type="submit">Send Message</button>
+      </form>
+      <ul class="contact-links">
+        <li><a href="https://www.linkedin.com/in/devang-deokule-188584268/" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="https://github.com/Devang-Deokule" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a href="https://x.com/26Devangg" target="_blank" rel="noopener">Twitter</a></li>
+        <li><a href="https://www.instagram.com/devangg26?igsh=MTJ2ZmR4cmtycDFoZQ==" target="_blank" rel="noopener">Instagram</a></li>
+      </ul>
+    </section>
   </main>
+
+  <footer class="site-footer">
+    <p>© 2025 Devang Deokule. All rights reserved.</p>
+  </footer>
 </body>
 </html>

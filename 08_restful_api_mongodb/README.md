@@ -1,15 +1,38 @@
-# Experiment 8 - RESTful API using MongoDB
+# Experiment 08: RESTful API with MongoDB
 
-## Steps
+This project implements a basic RESTful API for User data using Express and Mongoose.
+
+## Requirements
+
+- Node.js
+- MongoDB running locally at mongodb://127.0.0.1:27017
+
+## Setup
+
 1. Install dependencies:
    npm install
-2. Create .env file from .env.example and update values.
-3. Start MongoDB locally.
-4. Run server:
+
+2. Start the server:
    npm run dev
 
+   or
+
+   npm start
+
+3. Server runs on:
+   http://localhost:5000
+
 ## API Endpoints
-- GET /api/todos
-- POST /api/todos
-- PUT /api/todos/:id
-- DELETE /api/todos/:id
+
+- POST /users
+- GET /users
+- GET /users/:id
+- PUT /users/:id
+- DELETE /users/:id
+
+## Example JSON body for create and update
+
+{
+  "name": "Devang",
+  "age": 21
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Experiment 9 - Flask Feedback Form</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+<div class="container">
+
+  <h1>Experiment 9: Feedback Form using Flask</h1>
+
+  <p class="desc">
+    Aim: To design and implement a web-based feedback form using Flask framework.
+  </p>
+
+  <form method="POST">
+    {{ form.hidden_tag() }}
+
+    <input type="text" name="name" placeholder="Your name">
+    <input type="text" name="email" placeholder="Your email">
+    <input type="text" name="subject" placeholder="Subject">
+    <textarea name="message" placeholder="Message"></textarea>
+
+    <input type="submit" value="Send">
+  </form>
+
+  <p class="footer">Devang Deokule - A58</p>
+</div>
+</body>
+</html>
